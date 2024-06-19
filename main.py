@@ -41,16 +41,15 @@ uploaded_file = st.file_uploader(
 submit = st.button("Analyse Image")
 if submit:
     if uploaded_file is not None:
-        image = Image.open(uploaded_file).convert('RGB')
+        image = Image.open(uploaded_file).convert("RGB")
         st.image(image, caption="Uploaded Image", use_column_width=True)
         st.write("")
-        wait=st.empty()
+        wait = st.empty()
         wait.write("Classifying...")
         labels, probabilities = classify_image(image)
         wait.empty()
         st.write("This photo has:")
         for label, probability in zip(labels, probabilities):
             st.write(f"{label}: {probability*100:.2f}%")
-    else :
+    else:
         st.write("Please upload a Photo!")
-
