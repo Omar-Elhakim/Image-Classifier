@@ -48,3 +48,7 @@ streamlit run main.py
 
 Then open the URL shown in the terminal, upload an image, and click
 **Analyse Image** to see the predictions.
+
+## License
+
+Released under the [MIT License](LICENSE).
