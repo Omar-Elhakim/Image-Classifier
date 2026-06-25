@@ -1,2 +1,5 @@
+streamlit
 torch
 torchvision
+pillow
+requests
